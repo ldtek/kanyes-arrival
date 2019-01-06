@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="icon" type="image/png" href="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fih0.redbubble.net%2Fimage.432053491.2384%2Fraf%2C360x360%2C075%2Ct%2Cfafafa%3Aca443f4786.jpg&f=1">
+
+    <meta charset="utf-8">
+    <title>countdown to kanye as president</title>
+  </head>
+  <style>
+    html, body {
+      margin: 0;
+      background-image: url("https://motherboard-images.vice.com/content-images/contentimage/no-id/1441286087064677.jpg?crop=0.8614814814814815xw:1xh;center,center&resize=1200:");
+      background-size: cover;
+      font-family: tahoma, sans-serif;
+      font-weight: bold;
+      color: white;
+    }
+    header {
+      font-size: 30px;
+      text-align: center;
+      padding: 60px 0px 30px 0px;
+      text-shadow: 0px 2px 10px black;
+    }
+    .container {
+      display: grid;
+      text-align: center;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      text-shadow: 0px 2px 10px black;
+    }
+    .number {
+      font-size: 60px;
+    }
+
+    a{
+      color:white;
+    }
+
+    .urmom {
+    color:  blue;
+    }
+  </style>
+  <body>
+    <header>Countdown till kanye is president</header>
+<div class="container">
+  <div class="days">
+    <div class="number">0</div>
+    <div class="label">Days</div>
+  </div>
+
+  <div class="hours">
+    <div class="number">0</div>
+    <div class="label">Hours</div>
+  </div>
+
+  <div class="minutes">
+    <div class="number">0</div>
+    <div class="label">Minutes</div>
+  </div>
+
+  <div class="seconds">
+    <div class="number">0</div>
+    <div class="label">Seconds</div>
+  </div>
+</div>
+
+<hr/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+<footer>
+  <div class="urmom">
+<h3 style="text-align: center;">made by <a href="https://github.com/ldtek" target="_blank">Daniel Turanov</a> and <a href="https://github.com/ItzFrostbiteTv" target="_blank">Charles Roberts</a></h3>
+</div>
+</footer>
+
+<script>
+  const daysElement = document.querySelectorAll(".number")[0];
+const hoursElement = document.querySelectorAll(".number")[1];
+const minutesElement = document.querySelectorAll(".number")[2];
+const secondsElement = document.querySelectorAll(".number")[3];
+
+const second = 1000,
+    minute = second * 60,
+    hour = minute * 60,
+    day = hour * 24;
+
+let capodanno = new Date(2021,1,20,0,0,0).getTime();
+let timer = setInterval(update, 1000);
+
+function update() {
+let adesso = new Date().getTime();
+let d = capodanno - adesso;
+
+if(d < 0) {
+  clearInterval(timer);
+  for(let i=0; i<document.querySelectorAll(".number").length; i++) {
+    document.querySelectorAll(".number")[i].style.color = "brown";
+  }
+}
+else {
+  daysElement.innerHTML    = Math.floor(  d           / day   );
+  hoursElement.innerHTML   = Math.floor( (d % day)    / hour  );
+  minutesElement.innerHTML = Math.floor( (d % hour)   / minute);
+  secondsElement.innerHTML = Math.floor( (d % minute) / second);
+}
+}
+</script>
+  </body>
+</html>
